@@ -1,135 +1,159 @@
 <html>
- <head>
-  <title>
-   Profile Page
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
-            background: url('https://placehold.co/800x600') no-repeat center center fixed;
-            background-size: cover;
-            color: white;
+<head>
+    <title>Visitors Analytics</title>
+    <style>
+        body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            background-color: #f5f7fa;
             margin: 0;
+            padding: 0;
         }
         .container {
-            text-align: center;
-            width: 90%;
-            max-width: 400px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-        }
-        .profile-pic {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
+            width: 80%;
             margin: 0 auto;
+            padding: 20px;
         }
-        .name {
-            font-size: 18px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-        .description {
-            font-size: 14px;
-            color: #b3b3b3;
-            margin-bottom: 20px;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .social-icons a {
-            font-size: 24px;
-            color: white;
-            text-decoration: none;
-        }
-        .button {
-            background: #333;
-            border: none;
-            color: white;
-            padding: 15px;
-            text-align: left;
-            width: 100%;
-            margin-bottom: 10px;
-            border-radius: 5px;
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-size: 16px;
-            text-decoration: none;
+            margin-bottom: 20px;
         }
-        .button i {
-            font-size: 18px;
+        .header .date-range {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-  </style>
- </head>
- <body>
-  <div class="container">
-   <img alt="Profile picture of a character with white hair and blue outfit" class="profile-pic" height="100" src="https://storage.googleapis.com/a1aa/image/4JC3D7AnwdZVPtAVuVK0ZtK1fgnJH2fuvN9cXdGPMqaYXnoTA.jpg" width="100"/>
-   <div class="name">
-    EKO PURWADI 05TPLP003
-   </div>
-   <div class="description">
-    Kumpulan Tugas Matkul Pemrograman Web 1
-   </div>
-   <div class="social-icons">
-    <a href="https://www.instagram.com" target="_blank">
-     <i class="fab fa-instagram">
-     </i>
-    </a>
-    <a href="https://www.github.com" target="_blank">
-     <i class="fab fa-github">
-     </i>
-    </a>
-    <a href="https://www.spotify.com" target="_blank">
-     <i class="fab fa-spotify">
-     </i>
-    </a>
-    <a href="https://www.linkedin.com" target="_blank">
-     <i class="fab fa-linkedin">
-     </i>
-    </a>
-   </div>
-   <a class="button" href="https://example.com/form-login" target="_blank">
-    FORM LOGIN
-    <i class="fas fa-ellipsis-v">
-    </i>
-   </a>
-   <a class="button" href="https://example.com/web-portfolio" target="_blank">
-    WEB PORTFOLIO
-    <i class="fas fa-ellipsis-v">
-    </i>
-   </a>
-   <a class="button" href="https://example.com/kalkulator-sederhana" target="_blank">
-    KALKULATOR SEDERHANA
-    <i class="fas fa-ellipsis-v">
-    </i>
-   </a>
-   <a class="button" href="https://example.com/tic-tac-toe" target="_blank">
-    TIC TAC TOE
-    <i class="fas fa-ellipsis-v">
-    </i>
-   </a>
-   <a class="button" href="https://example.com/tabel-data" target="_blank">
-    Tabel Data
-    <i class="fas fa-ellipsis-v">
-    </i>
-   </a>
-   <a class="button" href="https://example.com/sertifikat" target="_blank">
-    Sertifikat
-    <i class="fas fa-ellipsis-v">
-    </i>
-   </a>
-  </div>
- </body>
+        .header .date-range i {
+            margin-right: 10px;
+        }
+        .header .dropdown {
+            background-color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .chart {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .chart h2 {
+            margin: 0 0 20px 0;
+        }
+        .chart .bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            height: 200px;
+        }
+        .chart .bar div {
+            width: 2%;
+            background-color: #3b82f6;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-between;
+        }
+        .stats .stat {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 23%;
+        }
+        .stats .stat h3 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .stats .stat p {
+            margin: 5px 0 0 0;
+            color: #6b7280;
+        }
+        .stats .stat .change {
+            color: #10b981;
+        }
+        .stats .stat .change.down {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="date-range">
+                <i class="far fa-calendar-alt"></i>
+                <span>Dec 29, 2023 - Jan 4, 2024</span>
+            </div>
+            <div class="dropdown">
+                <span>Daily</span>
+            </div>
+        </div>
+        <div class="chart">
+            <h2>Visitors Analytics</h2>
+            <div class="bar">
+                <div style="height: 60%;"></div>
+                <div style="height: 40%;"></div>
+                <div style="height: 80%;"></div>
+                <div style="height: 20%;"></div>
+                <div style="height: 50%;"></div>
+                <div style="height: 10%;"></div>
+                <div style="height: 70%;"></div>
+                <div style="height: 30%;"></div>
+                <div style="height: 60%;"></div>
+                <div style="height: 40%;"></div>
+                <div style="height: 20%;"></div>
+                <div style="height: 50%;"></div>
+                <div style="height: 10%;"></div>
+                <div style="height: 70%;"></div>
+                <div style="height: 30%;"></div>
+                <div style="height: 60%;"></div>
+                <div style="height: 40%;"></div>
+                <div style="height: 20%;"></div>
+                <div style="height: 50%;"></div>
+                <div style="height: 10%;"></div>
+                <div style="height: 70%;"></div>
+                <div style="height: 30%;"></div>
+                <div style="height: 60%;"></div>
+                <div style="height: 40%;"></div>
+                <div style="height: 20%;"></div>
+                <div style="height: 50%;"></div>
+                <div style="height: 10%;"></div>
+                <div style="height: 70%;"></div>
+                <div style="height: 30%;"></div>
+                <div style="height: 60%;"></div>
+                <div style="height: 40%;"></div>
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <h3>18.6K</h3>
+                <p>Unique Visitors</p>
+                <p class="change">↑ 18%</p>
+            </div>
+            <div class="stat">
+                <h3>55.9K</h3>
+                <p>Total Pageviews</p>
+                <p class="change">↑ 25%</p>
+            </div>
+            <div class="stat">
+                <h3>54%</h3>
+                <p>Bounce Rate</p>
+                <p class="change down">↓ 7%</p>
+            </div>
+            <div class="stat">
+                <h3>2m 56s</h3>
+                <p>Visit Duration</p>
+                <p class="change">↑ 12%</p>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</body>
 </html>
