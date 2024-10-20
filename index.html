@@ -6,212 +6,127 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
   <style>
    body {
-            font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-        }
-        .profile-header {
-            background: url('https://placehold.co/600x200?text=Genshin+Impact+Background') no-repeat center center;
+            background: url('https://placehold.co/800x600') no-repeat center center fixed;
             background-size: cover;
-            padding: 20px;
             color: white;
-            text-align: center;
-            position: relative;
-        }
-        .profile-header img {
-            border-radius: 50%;
-            width: 80px;
-            height: 80px;
-            border: 2px solid white;
-        }
-        .profile-header .name {
-            font-size: 24px;
-            margin: 10px 0 5px;
-        }
-        .profile-header .subtitle {
-            font-size: 16px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
         }
-        .profile-header .info {
-            margin: 10px 0;
-            font-size: 14px;
-        }
-        .profile-header .info span {
-            display: block;
-        }
-        .profile-header .info .exp-bar {
-            background-color: #4caf50;
-            height: 10px;
-            border-radius: 5px;
-            margin-top: 5px;
-        }
-        .profile-header .info .exp-bar span {
-            display: block;
-            height: 100%;
-            background-color: #8bc34a;
-            border-radius: 5px;
-        }
-        .profile-header .info .exp-text {
-            display: flex;
-            justify-content: space-between;
-        }
-        .profile-header .info .exp-text span {
-            font-size: 12px;
-        }
-        .profile-header .info .info-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .profile-header .info .info-item span {
-            font-size: 14px;
-        }
-        .profile-header .info .info-item i {
-            font-size: 14px;
-        }
-        .profile-header .settings {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 20px;
-        }
-        .menu {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background-color: #e0e0e0;
-            padding: 20px;
-        }
-        .menu-item {
-            width: calc(50% - 20px);
-            height: 100px;
-            background-color: #d3d3d3;
-            margin: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
+        .container {
             text-align: center;
-            color: #333;
+            width: 300px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+        .name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .description {
+            font-size: 14px;
+            color: #b3b3b3;
+            margin-bottom: 20px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .social-icons a {
+            font-size: 24px;
+            color: white;
             text-decoration: none;
         }
-        .menu-item i {
-            font-size: 24px;
-            margin-bottom: 5px;
+        .button {
+            background: #333;
+            border: none;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+            text-decoration: none;
         }
-        .menu-item span {
-            font-size: 14px;
+        .button i {
+            font-size: 18px;
         }
   </style>
  </head>
  <body>
-  <div class="profile-header">
-   <img alt="Genshin Impact Character" height="80" src="https://storage.googleapis.com/a1aa/image/DrG7JnvHrCIVAZroJCDaemW3MNfLIyg9p21kBG7xnMf1yIRnA.jpg" width="80"/>
+  <div class="container">
+   <img alt="Profile picture of a character with white hair and blue outfit" class="profile-pic" height="100" src="https://storage.googleapis.com/a1aa/image/4JC3D7AnwdZVPtAVuVK0ZtK1fgnJH2fuvN9cXdGPMqaYXnoTA.jpg" width="100"/>
    <div class="name">
-    Vyronxx.
+    EKO PURWADI 05TPLP003
    </div>
-   <div class="subtitle">
-    nubi
+   <div class="description">
+    Kumpulan Tugas Matkul Pemrograman Web 1
    </div>
-   <div class="info">
-    <span>
-     UID 863423947
-    </span>
-    <div class="info-item">
-     <span>
-      Rank Adventure
-     </span>
-     <span>
-      58
-      <i class="fas fa-info-circle">
-      </i>
-     </span>
-    </div>
-    <div class="info-item">
-     <span>
-      Adventure EXP
-     </span>
-     <div class="exp-bar">
-      <span style="width: 58%;">
-      </span>
-     </div>
-     <div class="exp-text">
-      <span>
-       182568
-      </span>
-      <span>
-       / 312825
-      </span>
-     </div>
-    </div>
-    <div class="info-item">
-     <span>
-      Level Dunia
-     </span>
-     <span>
-      8
-      <i class="fas fa-info-circle">
-      </i>
-     </span>
-    </div>
-    <div class="info-item">
-     <span>
-      Ulang Tahun
-     </span>
-     <span>
-      8/4
-     </span>
-    </div>
+   <div class="social-icons">
+    <a href="https://www.instagram.com" target="_blank">
+     <i class="fab fa-instagram">
+     </i>
+    </a>
+    <a href="https://www.github.com" target="_blank">
+     <i class="fab fa-github">
+     </i>
+    </a>
+    <a href="https://www.spotify.com" target="_blank">
+     <i class="fab fa-spotify">
+     </i>
+    </a>
+    <a href="https://www.linkedin.com" target="_blank">
+     <i class="fab fa-linkedin">
+     </i>
+    </a>
    </div>
-   <div class="settings">
-    <i class="fas fa-cog">
+   <a class="button" href="https://example.com/form-login" target="_blank">
+    FORM LOGIN
+    <i class="fas fa-ellipsis-v">
     </i>
-   </div>
-  </div>
-  <div class="menu">
-   <a class="menu-item" href="#">
-    <i class="fas fa-shopping-bag">
-    </i>
-    <span>
-     Toko
-    </span>
    </a>
-   <a class="menu-item" href="#">
-    <i class="fas fa-users-cog">
+   <a class="button" href="https://example.com/web-portfolio" target="_blank">
+    WEB PORTFOLIO
+    <i class="fas fa-ellipsis-v">
     </i>
-    <span>
-     Pengaturan Party
-    </span>
    </a>
-   <a class="menu-item" href="#">
-    <i class="fas fa-user-friends">
+   <a class="button" href="https://example.com/kalkulator-sederhana" target="_blank">
+    KALKULATOR SEDERHANA
+    <i class="fas fa-ellipsis-v">
     </i>
-    <span>
-     Teman
-    </span>
    </a>
-   <a class="menu-item" href="#">
-    <i class="fas fa-trophy">
+   <a class="button" href="https://example.com/tic-tac-toe" target="_blank">
+    TIC TAC TOE
+    <i class="fas fa-ellipsis-v">
     </i>
-    <span>
-     Achievement
-    </span>
    </a>
-   <a class="menu-item" href="#">
-    <i class="fas fa-book">
+   <a class="button" href="https://example.com/tabel-data" target="_blank">
+    Tabel Data
+    <i class="fas fa-ellipsis-v">
     </i>
-    <span>
-     Arsip
-    </span>
    </a>
-   <a class="menu-item" href="#">
-    <i class="fas fa-id-card">
+   <a class="button" href="https://example.com/sertifikat" target="_blank">
+    Sertifikat
+    <i class="fas fa-ellipsis-v">
     </i>
-    <span>
-     Arsip Karakter
-    </span>
    </a>
   </div>
  </body>
