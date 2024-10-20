@@ -10,62 +10,71 @@
             background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            width: 1080px;
-            height: 1920px;
-            overflow: hidden;
         }
         .profile-header {
-            background-image: url('https://placehold.co/1080x400');
+            background: url('https://placehold.co/600x200?text=Genshin+Impact+Background') no-repeat center center;
             background-size: cover;
-            background-position: center;
             padding: 20px;
             color: white;
             text-align: center;
             position: relative;
         }
-        .profile-header .edit-icon {
+        .profile-header img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            border: 2px solid white;
+        }
+        .profile-header .name {
+            font-size: 24px;
+            margin: 10px 0 5px;
+        }
+        .profile-header .subtitle {
+            font-size: 16px;
+            margin: 0;
+        }
+        .profile-header .info {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .profile-header .info span {
+            display: block;
+        }
+        .profile-header .info .exp-bar {
+            background-color: #4caf50;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .profile-header .info .exp-bar span {
+            display: block;
+            height: 100%;
+            background-color: #8bc34a;
+            border-radius: 5px;
+        }
+        .profile-header .info .exp-text {
+            display: flex;
+            justify-content: space-between;
+        }
+        .profile-header .info .exp-text span {
+            font-size: 12px;
+        }
+        .profile-header .info .info-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .profile-header .info .info-item span {
+            font-size: 14px;
+        }
+        .profile-header .info .info-item i {
+            font-size: 14px;
+        }
+        .profile-header .settings {
             position: absolute;
             top: 20px;
             right: 20px;
             font-size: 20px;
-            color: white;
-        }
-        .profile-header img {
-            border-radius: 50%;
-            border: 3px solid white;
-            width: 80px;
-            height: 80px;
-        }
-        .profile-header h1 {
-            margin: 10px 0 5px;
-            font-size: 24px;
-        }
-        .profile-header p {
-            margin: 5px 0;
-            font-size: 16px;
-        }
-        .profile-info {
-            background-color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .profile-info .info-item {
-            margin: 10px 0;
-            font-size: 18px;
-        }
-        .profile-info .info-item span {
-            font-weight: bold;
-        }
-        .profile-info .progress-bar {
-            background-color: #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 10px 0;
-        }
-        .profile-info .progress-bar div {
-            background-color: #4caf50;
-            height: 10px;
-            width: 55%;
         }
         .menu {
             display: flex;
@@ -75,130 +84,134 @@
             padding: 20px;
         }
         .menu-item {
-            background-color: #3b4a5a;
-            color: white;
-            width: 200px;
-            height: 200px;
-            margin: 20px;
+            width: calc(50% - 20px);
+            height: 100px;
+            background-color: #d3d3d3;
+            margin: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border-radius: 10px;
             text-align: center;
-            font-size: 24px;
+            color: #333;
             text-decoration: none;
         }
         .menu-item i {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        .menu-item span {
+            font-size: 14px;
         }
   </style>
  </head>
  <body>
   <div class="profile-header">
-   <i class="fas fa-edit edit-icon">
-   </i>
-   <img alt="Profile Picture" height="80" src="https://storage.googleapis.com/a1aa/image/oB9LWjSIjKbzM9eUlzv6Sn1VpQKXJbjpeqffqRQQ795UkSiOB.jpg" width="80"/>
-   <h1>
-    Vyron
-   </h1>
-   <p>
-    fisollll
-   </p>
-   <p>
-    UID 863423947
-   </p>
-   <p>
-    Salin
-   </p>
-  </div>
-  <div class="profile-info">
-   <div class="info-item">
-    Rank Adventure
-    <span>
-     57
-    </span>
+   <img alt="Genshin Impact Character" height="80" src="https://storage.googleapis.com/a1aa/image/DrG7JnvHrCIVAZroJCDaemW3MNfLIyg9p21kBG7xnMf1yIRnA.jpg" width="80"/>
+   <div class="name">
+    Vyronxx.
    </div>
-   <div class="progress-bar">
-    <div>
+   <div class="subtitle">
+    nubi
+   </div>
+   <div class="info">
+    <span>
+     UID 863423947
+    </span>
+    <div class="info-item">
+     <span>
+      Rank Adventure
+     </span>
+     <span>
+      58
+      <i class="fas fa-info-circle">
+      </i>
+     </span>
+    </div>
+    <div class="info-item">
+     <span>
+      Adventure EXP
+     </span>
+     <div class="exp-bar">
+      <span style="width: 58%;">
+      </span>
+     </div>
+     <div class="exp-text">
+      <span>
+       182568
+      </span>
+      <span>
+       / 312825
+      </span>
+     </div>
+    </div>
+    <div class="info-item">
+     <span>
+      Level Dunia
+     </span>
+     <span>
+      8
+      <i class="fas fa-info-circle">
+      </i>
+     </span>
+    </div>
+    <div class="info-item">
+     <span>
+      Ulang Tahun
+     </span>
+     <span>
+      8/4
+     </span>
     </div>
    </div>
-   <div class="info-item">
-    Adventure EXP
-    <span>
-     157308 / 285750
-    </span>
-   </div>
-   <div class="info-item">
-    Level Dunia
-    <span>
-     8
-    </span>
-   </div>
-   <div class="info-item">
-    Ulang Tahun
-    <span>
-     8/4
-    </span>
+   <div class="settings">
+    <i class="fas fa-cog">
+    </i>
    </div>
   </div>
   <div class="menu">
    <a class="menu-item" href="#">
     <i class="fas fa-shopping-bag">
     </i>
-    <p>
+    <span>
      Toko
-    </p>
+    </span>
    </a>
    <a class="menu-item" href="#">
     <i class="fas fa-users-cog">
     </i>
-    <p>
+    <span>
      Pengaturan Party
-    </p>
+    </span>
    </a>
    <a class="menu-item" href="#">
     <i class="fas fa-user-friends">
     </i>
-    <p>
+    <span>
      Teman
-    </p>
+    </span>
    </a>
    <a class="menu-item" href="#">
     <i class="fas fa-trophy">
     </i>
-    <p>
+    <span>
      Achievement
-    </p>
+    </span>
    </a>
    <a class="menu-item" href="#">
-    <i class="fas fa-archive">
+    <i class="fas fa-book">
     </i>
-    <p>
+    <span>
      Arsip
-    </p>
+    </span>
    </a>
    <a class="menu-item" href="#">
     <i class="fas fa-id-card">
     </i>
-    <p>
+    <span>
      Arsip Karakter
-    </p>
-   </a>
-   <a class="menu-item" href="#">
-    <i class="fas fa-user">
-    </i>
-    <p>
-     Karakter
-    </p>
-   </a>
-   <a class="menu-item" href="#">
-    <i class="fas fa-briefcase">
-    </i>
-    <p>
-     Tas
-    </p>
+    </span>
    </a>
   </div>
  </body>
